@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Signup</title>
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	<script src="/static/sign.js"></script>
+</head>
+<style>
+	body {
+	margin: 0;
+	padding: 0;
+	background-color: #f2f2f2;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	max-width: 600px;
+	margin: 50px auto;
+	background-color: #fdfcfc;
+	padding: 30px;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	border-radius: 5px;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 0;
+}
+
+form {
+	display: grid;
+	grid-gap: 10px;
+}
+
+label {
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+select {
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	background-color: #f2f2f2;
+}
+
+input[type="submit"] {
+	padding: 10px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: none;
+	background-color: #4CAF50;
+	color: #fff;
+	cursor: pointer;	
+}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+
+</style>
+<body>
+	<div class="container">
+		<form action="#" method="post">
+			{% csrf_token %}
+			{% load static %}
+		<h1>Student Signup</h1>
+		<form action="#" method="post">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+			<label for="sapid">SAP ID:</label>
+			<input type="text" id="sapid" name="sapid" placeholder="Enter your SAP ID" required>
+			
+			<label for="rollno">Roll No:</label>
+			<input type="text" id="rollno" name="rollno" placeholder="Enter your Roll No." required>
+
+			<label for="dept">Department:</label>
+			<select id="dept" name="dept" required>
+				<option value="">Select your department</option>
+				<option value="CSE">Computer Science &amp; Engineering</option>
+				<option value="IT">Information Technology</option>
+				<option value="ECE">Electronics &amp; Communication Engineering</option>
+				<option value="EEE">Electrical &amp; Electronics Engineering</option>
+			</select>
+
+			<label for="semester">Current Semester:</label>
+			<input type="text" id="semester" name="semester" placeholder="Enter your Current Semester." required>
+
+			<label for="pyear">Passing Year:</label>
+			<input type="text" id="pyear" name="pyear" placeholder="Enter your passing year." required>
+
+			<label for="tproject">Total Project Done:</label>
+			<input type="text" id="tproject" name="tproject" placeholder="Enter your total project" required>
+
+			<label for="project">Project Title:</label>
+			<input type="text" id="project" name="project" placeholder="Enter your project title" required>
+
+			<label for="contact">Contact Number:</label>
+			<input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+             
+			<label for="mentorn">Mentor Name:</label>
+			<input type="text" id="mentorn" name="mentorn" placeholder="Enter your mentor name" required>
+
+
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+
+			<label for="confirmpassword" onclick="matchPassword()">Confirm Password:</label>
+			<input type="password" id="confirmpassword" name="confirmpassword" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+			<br>
+			<input type="submit" onclick="signupmessage()" value="Sign Up">
+			
+		</form>
+		<br>
+		<center>
+        <label><a href="//127.0.0.1:8000/"><p>Return To Login</p></label></center>
+	</div>
+</body>
+</html>

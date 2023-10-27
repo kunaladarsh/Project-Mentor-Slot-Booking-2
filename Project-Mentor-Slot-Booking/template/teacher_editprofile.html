@@ -1,0 +1,294 @@
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>{{title}}</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+  <link rel="stylesheet" href="/static/script.js">
+  <script>
+   function msgpers() {
+       alert("Personal Details Update Succesfully");
+      }
+    function msgproj() {
+        alert("project Details Update Succesfully");
+      }
+    function msgpass() {
+         alert("password Update Succesfully");
+      }
+</script> 
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .profile11 {
+    
+    display: inline-block;
+    grid-template-columns: repeat(2,1fr);
+    width: auto;
+    padding: auto;
+    padding: 10px 80px 20px;
+    margin: auto;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+
+  .profile2{
+  text-align: center;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+ 
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+select {	
+	border-radius: 5px;
+	border: none;
+  width: 60%;
+	background-color: #ffffff;
+}
+  
+input[type="text1"],
+select {	
+	border-radius: 5px;
+	border: none;
+  width: 120%;
+  height: 35px;
+	background-color: #ffffff;
+}
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  input[type="submit"] {
+    background-color: #065b09;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin: 4px 2px;
+  font-weight: bold;
+  transition: 0.3s;
+        padding: 0.75rem 3.5rem;
+        border-radius: 0.49rem;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 0px 1.5px #ffffff;
+      }
+
+  .btn {
+    background-color: #065b09;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin: 4px 2px;
+  font-weight: bold;
+  transition: 0.3s;
+        padding: 0.75rem 3.5rem;
+        border-radius: 0.49rem;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 0px 1.5px #ffffff;
+}
+
+.btn:hover {
+  background-color: #154700;
+  color: white;
+}
+  
+.btn1 {
+    background-color: #9b2a2a;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin: 4px 2px;
+  font-weight: bold;
+  transition: 0.3s;
+        padding: 0.75rem 3.5rem;
+        border-radius: 0.49rem;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 0px 1.5px #ffffff;
+}
+
+.btn1:hover {
+  background-color: #d20000;
+  color: white;
+}
+
+h5 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+  </style>
+  
+<body onload="funload()">
+	
+	<header>
+		<nav class="navbar navbar-expand-sm bg-secondary navbar-secondary">
+			<a class="navbar-brand">
+				<!-- The below line can be an image or a h1, either will work -->
+				<img src="https://s3.amazonaws.com/upes-prod/media/7545/upes-logo.webp" style="max-height: 38px;"
+					alt="">
+			</a>
+		<nav class="navbar navbar-expand-sm bg-secondary justify-content-center">
+			<button style="background-color:rgb(247, 243, 243);" class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item"><span><a class="nav-link active" href="//127.0.0.1:8000/homePage/"><b>Home</b></a></span></li>
+					<li class="nav-item "><span><a class="nav-link" href="//127.0.0.1:8000/request/"><b>New Requests</b></a></span></li>
+					<li class="nav-item "><span><a class="nav-link" href="//127.0.0.1:8000/slotaccepted/"><b>Current Projects</b></a></span></li>
+					<li class="nav-item "><span><a class="nav-link" href="//127.0.0.1:8000/teachereditProfile/"><b>Edit Profile</b></a></span></li>
+					<li class="nav-item "><span><a class="nav-link" href="//127.0.0.1:8000/"><b>Logout</b></a></span></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+    <br>
+        
+    <main>      
+      <section class="profile11">
+        <form action="#" method="post">
+        {% csrf_token %}
+        {% load static %}
+			<div class="profile" style="background-color:#e0f6fe;", text-align="center;", width=80%;>
+        
+        <table>
+        <tr><td>  
+        <CENTER><h3><b>Personal Details</b><h3></center><br></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+
+          <td>
+              <center>
+              <label for="tname"><b>Name:</b></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              <input type="text" id="tname" name="tname" value=''><br><br>
+      
+              <label for="tid"><b>Teacher Id:</b></label>&nbsp&nbsp
+               <input type="text" id="tid" name="tid" value=""><br><br>
+      
+               <label for="tdept"><b>Department:</b></label>&nbsp
+               <input type="text" id="tdept" name="tdept" value=""><br><br>
+
+               <label for="temail"><b>Email:</b></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="text" id="temail" name="temail" value=""><br><br>
+
+                <label for="tphoneno"><b>Phone No:</b></label>&nbsp&nbsp
+                <input type="text" id="tphoneno" name="tphoneno" value=""><br><br>
+
+                <label for="officeno"><b>Office Location:</b></label>
+                <input type="text" id="officeno" name="officeno" value=""><br><br>
+              </center>
+          </td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+
+          <td>
+              <center>
+               <button class="btn" onclick ="msgpers()">Update Details</button> 
+            </form>
+              </center>	
+               <br>
+          </td></tr>
+        </table>
+			</div>
+      <br>
+    </form>
+    
+
+      <center>
+			<div class="profile" style="background-color:#e0f6fe;">
+        <form action="#" method="post">
+          {% csrf_token %}
+        {% load static %}
+          <table>
+          <tr><td>  
+          <CENTER><h3><b>Slot Details</b><h3></center><br></td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  
+            <td>
+                <center>
+                  <label for="totalslot"><b>Total Slots::</label>&nbsp&nbsp
+                  <input type="text" id="totalslot" name="totalslot" value=""><br><br>
+
+                  <label for="filledslot">Filled Slot:</label>&nbsp&nbsp
+                  <input type="text" id="filledslot" name="filledslot" value=""><br><br>
+
+                  
+                 </center>
+            </td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  
+            <td>
+                <center>
+                <button class="btn" onclick="msgproj()">Update Slots</button>
+                </form>
+                </center>	
+                 <br>
+            </td></tr>
+          </table>
+			</div>
+    </center><br>
+
+
+
+    <center>
+			<div class="profile" style="background-color:#f4f6e0;">
+        <form action="#" method="post">
+          {% csrf_token %}
+          {% load static %}
+        <br>
+          <table>
+          <tr><td> 
+            <br> 
+          <CENTER><h5><b>Change password</b><h5></center><br></td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  
+            <td>
+                <center>
+                  <br>
+                  <input type="text1" id="tpassword" name="tpassword" value=""><br><br>
+                 </center>
+                  
+                  
+            </td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  
+            <td>
+                <center>
+                <button class="btn1" onclick="msgpass()">Change Password</button>
+                </form>
+                </center>	
+                 
+            </td></tr>
+          </table>
+			</div>
+    </center>
+		</section>
+    </main>
+</body>
+</html>

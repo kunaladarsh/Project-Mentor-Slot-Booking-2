@@ -1,0 +1,111 @@
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Mentor Select Login</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<style>
+    .profile121{  
+     background-color: rgb(244, 244, 244);
+     display: inline-block;
+     width: 100%; /* Changed from 105% */
+     padding: auto;
+     padding: 10px 80px 20px;
+     margin: auto;
+     height: 80%;
+     text-align: center;
+     border: none;
+     border-radius: 1rem;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+   }
+ 
+   /* Center the buttons */
+   .profile {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh; /* Center vertically in the viewport */
+   }
+ 
+   .btn1 {
+     background-color: #f5b511;
+     border: none;
+     color: rgb(241, 241, 241);
+     text-align: center;
+     color: #ededed;
+     font-size: 18px;
+     margin: 4px 2px;
+     font-weight: bold;
+     transition: 0.3s;
+     padding: 0.75rem 3.5rem;
+     border-radius: 1.99rem;
+     border: none;
+     cursor: pointer;
+     box-shadow: 0px 0px 1.5px #fdfdfd;
+   }
+   .btn1 {font-size: 28px;}
+ 
+   .btn1:hover {
+     background-color: rgb(255, 215, 53);
+     color: white;
+   }
+ 
+   .btn2 {
+     background-color: #073aa7;
+     border: none;
+     color: rgb(255, 255, 255);
+     text-align: center;
+     color: #ffffff;
+     font-size: 28px;
+     margin: 14px 12px;
+     font-weight: bold;
+     transition: 0.3s;
+     padding: 0.75rem 3.5rem;
+     border-radius: 1.99rem;
+     border: none;
+     cursor: pointer;
+     box-shadow: 0px 0px 1.5px #ffffff;
+   }
+   .btn2 {font-size: 28px;}
+ 
+   .btn2:hover {
+     background-color: #040e5e;
+     color: rgb(255, 255, 255);
+   }
+ </style>
+ 
+
+<body onload="funload()">
+	<header>
+		<nav class="navbar navbar-expand-sm bg-secondary navbar-secondary">
+			<a class="navbar-brand">
+				<!-- The below line can be an image or a h1, either will work -->
+				<img src="https://s3.amazonaws.com/upes-prod/media/7545/upes-logo.webp" style="max-height: 38px;"
+					alt="">
+			</a>
+	</header>
+    <br>
+    <main>
+       
+        <section class="profile121">
+            <br><br>	
+            <h1> <b>Welecome to Mentor Slot Booking</b></h1>	
+            <br>
+                <center>
+                  <button class="btn2" style="height:150px; width:400px;">
+                    <span><a href = "//127.0.0.1:8000/achomepage/"> <h2> Login to Activity Coordinator</h2></a></span>
+                  </button>
+                                               
+                    <button class="btn1" style="height:150px; width:400px;"> 
+                    <a href = "//127.0.0.1:8000/homePage/"> <h1> Login to mentor</h1></a>
+                    </button>
+                </center>       
+		</section>
+   
+        <br>
+    </main>
+</body>
+</html>

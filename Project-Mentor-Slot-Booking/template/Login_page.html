@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>LOGIN TO MENTOR SLOT Booking</title>
+    
+    
+    <style>
+      /* Add styles for the page */
+      body {
+        background-color: #ffffff;
+        display: flex;
+        margin: 2.8% 5% 5% 10%;
+        align-items: 15rem;
+        justify-content: 10rem;
+        height: 75vh;
+        width: 70vh;
+      }
+
+      .form-container {
+        background-color: #f7f8fb;
+        padding: 4rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        margin: 0px auto;
+      }
+
+
+      h1 { 
+        text-align: center;
+        color: rgb(6, 65, 127);
+        margin-bottom: 2rem;
+      } 
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        color: rgb(8, 5, 5);
+        margin-bottom: 0.4rem;
+      }
+
+      input[type="text"] {
+        color: rgb(8, 5, 5);
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border-radius: 0.25rem;
+        border: none;
+        width: 100%;
+        box-shadow: 1px 0.2px 0.5px #d4d1d1;
+      }
+
+      input[type="password"] {
+        color: rgb(8, 5, 5);
+        padding: 0.5rem;
+        margin-bottom: 1.2rem;
+        border-radius: 0.25rem;
+        border: none;
+        width: 100%;
+        box-shadow: 1px 0.2px 0.5px #d4d1d1;
+      }
+
+      input[type="submit"] {
+        background-color: rgb(35, 28, 113);
+        color: #e4e5e9;
+        padding: 0.75rem 5.5rem;
+        border-radius: 1.25rem;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 0px 0.5px #888888;
+      }
+    </style>
+  </head>
+ 
+  <body><center>
+    <div class="form-container">
+      <form action="#" method="POST">
+        {% csrf_token %}
+        {% load static %}
+      <img src="https://s3.amazonaws.com/upes-prod/media/7545/upes-logo.webp" style="max-height: 80px;"/>    
+      <h1>Login To Slot Booking</h1>
+      <form>
+        <label for="username">User ID:</label>
+        <input type="text" id="username" placeholder="Email ID" name="sapid" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="password" name="password" required>
+
+        <input type="submit" value="LOGIN TO UPES"> 
+
+        <center>
+        <label><p><u><a href="//127.0.0.1:8000/signup/"><p>Create a account</p></a></label> 
+        <label><p><u><a href="//127.0.0.1:8000/teacherhome/"><p>Teacher Login</p></a></label> 
+        <!-- <label><p><u><a href="//127.0.0.1:8000/signup/"><p>Admin Login</p></a></label>  -->
+
+        </center>
+
+    </div>
+  </center>
+  </body>
+</center>
+  <body>
+    <div class="SecContainer">
+      <img src="/static/Icons/loginPic.png" style="max-height: 654px; border-radius:12px;"/>
+    </div>
+  </body>
+  </center>
+</html>
+

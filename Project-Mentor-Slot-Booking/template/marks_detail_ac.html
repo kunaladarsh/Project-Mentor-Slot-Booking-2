@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Project Mentor Slot Booking</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <style>
+        .title {
+            text-align: center;
+        }
+        .center-text {
+            text-align: center;
+        }
+        .group-row {
+            background-color: #f0f0f0; /* Set your desired background color here */
+        }
+        .mentor-cell {
+            background-color: #f0f0f0; /* Set the same background color for mentor's column */
+        }
+    </style>
+</head>
+
+<body onload="funload()">
+    <header>
+        <nav class="navbar navbar-expand-sm bg-secondary navbar-secondary">
+            <a class="navbar-brand">
+                <img src="https://s3.amazonaws.com/upes-prod/media/7545/upes-logo.webp" style="max-height: 38px;" alt="">
+            </a>
+            <nav class="navbar navbar-expand-sm bg-secondary justify-content-center">
+                <button style="background-color: rgb(196, 193, 193);" class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><span><a class="nav-link active" href="//127.0.0.1:8000/achomepage/"><b>Home</b></a></span></li>
+                        <li class="nav-item "><span><a class="nav-link" href="//127.0.0.1:8000/group_details_ac/"><b>Group details</b></a></span></li>
+                        <li class="nav-item "><span><a class="nav-link" href="//127.0.0.1:8000/group_marks_ac/"><b>Marks Details</b></a></span></li>
+                        <li class="nav-item "><span><a class="nav-link" href="//127.0.0.1:8000/panel.member.datail/"><b>Panel Members Details</b></a></span></li>
+                        <li class="nav-item "><span><a class="nav-link" href="http://127.0.0.1:8000/teacherhome/"><b>Logout</b></a></span></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <br>
+
+        
+            <main>
+                <div class="container my-3">
+                    <div class="card shadow-sm my-3 w-100">
+                        <div class="card-header pb-0">
+                            <div class="card-title">Marks Details</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th class="center-text">Group No.</th>
+                                            <th class="center-text">Synopsis Marks</th>
+                                            <th class="center-text">Midsem Marks</th>
+                                            <th class="center-text">Endsem Marks</th>
+                                            <th class="center-text">Synopsis Report</th>                   
+                                            <th class="center-text">Midsem Report</th>                                   
+                                            <th class="center-text">Endsem Report</th>
+                                            <th class="center-text"></th>
+                                            <th class="center-text"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for i in data %}
+                                        <tr class="center-text">
+                                            <td class="center-text">{{ i.2 }}</td>
+                                            <td class="center-text">{{ i.3}}</td>
+                                            <td class="center-text">{{ i.4 }}</td>
+                                            <td class="center-text">{{ i.5}}</td>
+
+                                             
+                                             <td class="center-text">
+                                                <a href="{{ i.6 }}" target="_blank">
+                                                    <img src="https://user-images.githubusercontent.com/78250787/278734805-c5fba9f7-34dd-4514-90c9-ba32465b7a2f.png" style="max-height: 32px;" alt="Open in new tab" title="Open in new tab">
+                                                </a>
+                                                
+                                            </td>
+
+                                            <td class="center-text">
+                                                <a href="{{ i.7 }}" target="_blank">
+                                                    <img src="https://user-images.githubusercontent.com/78250787/278734805-c5fba9f7-34dd-4514-90c9-ba32465b7a2f.png" style="max-height: 32px;" alt="Open in new tab" title="Open in new tab">
+                                                </a>
+                                                
+                                            </td>
+
+                                            <td class="center-text">
+                                                <a href="{{i.8}}" target="_blank">
+                                                    <img src="https://user-images.githubusercontent.com/78250787/278734805-c5fba9f7-34dd-4514-90c9-ba32465b7a2f.png" style="max-height: 32px;" alt="Open in new tab" title="Open in new tab">
+                                                </a>
+                                                
+                                            </td>
+
+                                            <td class="center-text"></td>
+                                        </tr>
+                                        <tr class="center-text">
+                                            <td class="center-text"></td>
+                                            <td class="center-text"></td>
+                                            <td class="center-text"></td>
+                                            <td class="center-text"></td>
+                                            <td class="center-text"></td>
+                                            <td class="center-text"></td>
+                                            <!-- <td class="center-text mentor-cell" rowspan="2"></td> -->
+                                        </tr>
+                                        <!-- Additional rows for other students go here -->
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </body>
+       
+    </html>

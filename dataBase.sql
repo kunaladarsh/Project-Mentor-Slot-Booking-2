@@ -1,6 +1,5 @@
 create database MentorSlotBooking;
-use MentorSlotBooking;
-
+use MentorSlotBooking
 create table signup1(name varchar(50), 
 sapid varchar(50) primary key, 
 roll varchar(50),
@@ -14,8 +13,6 @@ mentorn varchar(50),
 password varchar(50), 
 cpassword varchar(50));
 
-select *from Signup1 
-
 create table teacher(name varchar(50), 
 id varchar(50) primary key, 
 department varchar(50),
@@ -25,9 +22,6 @@ office_number varchar(50),
 password varchar(50),
 totalslot int(10),
 fillslot int(10));
-
-select * from teacher;
-
 
 create table newrequest(
 projectid varchar(100) primary key,
@@ -42,9 +36,6 @@ member5 varchar(50),
 current_date1 varchar(50), 
 current_time1 varchar(50));
 
-select * from newrequest;
-
-
 create table accepted(
 FEmailid varchar(50),
 projectid varchar(50) primary key,
@@ -57,8 +48,6 @@ member4 varchar(50),
 member5 varchar(50), 
 current_date1 varchar(50), 
 current_time1 varchar(50));
-select * from accepted;
-
 
 create table reject(
 FEmailid varchar(50),
@@ -73,8 +62,6 @@ member5 varchar(50),
 current_date1 varchar(50), 
 current_time1 varchar(50));
 
-select * from reject;
-
 CREATE TABLE group_details (
     teacher_id INT,
     group_id INT,
@@ -85,8 +72,6 @@ CREATE TABLE group_details (
     specialization1 VARCHAR(50), specialization2 VARCHAR(50), specialization3 VARCHAR(50), specialization4 VARCHAR(50), specialization5 VARCHAR(50),
     mentor_name VARCHAR(255)
 );
-
-select * from group_details;
 
 CREATE TABLE group_marks_ac(
     teacher_id INT,
@@ -113,6 +98,12 @@ CREATE TABLE group_details (
     mentor_name VARCHAR(255)
 );
 
-select * from group_details;
 show tables;
+select * from group_details;
+select *from Signup1 
+select * from teacher;
+select * from newrequest;
+select * from accepted;
+select * from reject;
+select * from group_details;
 select * from newrequest;
